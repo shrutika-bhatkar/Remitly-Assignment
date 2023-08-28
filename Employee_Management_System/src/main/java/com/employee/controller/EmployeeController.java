@@ -57,7 +57,7 @@ public class EmployeeController {
 	}
 	
 	@PutMapping("/updateEmp/{id}")
-	public ResponseEntity<String> updateEmployee(@PathVariable int id){
+	public ResponseEntity<String> updateEmployee(@RequestBody int id){
 		empservice.updateEmployee(id);
 		return new ResponseEntity<String>("Updated Successfully", HttpStatus.ACCEPTED);
 		
