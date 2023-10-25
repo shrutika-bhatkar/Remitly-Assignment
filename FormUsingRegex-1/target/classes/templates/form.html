@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Form Validation Example</title>
+</head>
+<body>
+    <h1>Form Validation Example</h1>
+    <form th:action="@{/form}" th:object="${user}" method="post">
+        <div>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" th:field="*{email}" />
+            <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
+        </div>
+        <div>
+            <label for="mobileNumber">Mobile Number:</label>
+            <input type="text" id="mobileNumber" name="mobileNumber" th:field="*{mobileNumber}" />
+            <span th:if="${#fields.hasErrors('mobileNumber')}" th:errors="*{mobileNumber}"></span>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
