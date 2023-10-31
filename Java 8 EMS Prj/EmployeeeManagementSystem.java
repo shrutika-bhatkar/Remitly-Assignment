@@ -50,19 +50,7 @@ public class EmployeeeManagementSystem {
     }
     
 
-    // public void updateEmployee(int id, String name, LocalDate birthDate, double salary) {
-    //     Optional<Employee> employeeOptional = employees.stream()
-    //             .filter(e -> e.getId() == id)
-    //             .findFirst();
-    //     if (employeeOptional.isPresent()) {
-    //         Employee employee = employeeOptional.get();
-    //         employee.name = name;
-    //         employee.birthDate = birthDate;
-    //         employee.salary = salary;
-    //     } else {
-    //         System.out.println("Employee not found.");
-    //     }
-    // }
+
 
     public void deleteEmployee(int id) {
         employees.removeIf(e -> e.getId() == id);
@@ -94,10 +82,7 @@ public class EmployeeeManagementSystem {
         List<Employee> allEmployees = ems.getAllEmployees();
         allEmployees.forEach(System.out::println);
 
-        //System.out.println("Update emp----------");
-        // Update an employee
-        // ems.updateEmployee(1, "John Updated", LocalDate.of(1992, 1, 1), 65000.0);
-
+        
         System.out.println("deleted an emp-----------");
         // Delete an employee
         ems.deleteEmployee(2);
